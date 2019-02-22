@@ -1,0 +1,23 @@
+<ion-app>
+  <ion-split-pane>
+    <ion-menu>
+      <ion-header>
+        <ion-toolbar>
+          <ion-title>Categories</ion-title>
+        </ion-toolbar>
+      </ion-header>
+      <ion-content>
+
+        <ion-menu-toggle auto-hide="true">
+          <ion-list>
+            <ion-item (click)="home()"> <label> <b>Home</b></label></ion-item>
+            <ion-item *ngFor="let cats of cat" [href]="'/list/' + cats.id" routerDirection="forward">
+              <label>{{cats.snippet.title}} </label>
+            </ion-item>
+          </ion-list>
+        </ion-menu-toggle>
+      </ion-content>
+    </ion-menu>
+    <ion-router-outlet main></ion-router-outlet>
+  </ion-split-pane>
+</ion-app>
