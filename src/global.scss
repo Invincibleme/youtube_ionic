@@ -9,3 +9,22 @@
 @import '~@ionic/angular/css/text-alignment.css';
 @import '~@ionic/angular/css/text-transformation.css';
 @import '~@ionic/angular/css/flex-utils.css';
+
+
+ion-toolbar{
+    --background: #282828;
+    --color: white;
+  }
+
+ion-item{
+    --background: #3e3e3e;
+    --color: white;
+  }
+
+  ion-content{
+    --background: #3e3e3e;
+  }
+  
+  ion-card-title{
+    color: white;
+  }

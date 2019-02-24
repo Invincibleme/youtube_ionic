@@ -10,24 +10,23 @@
 </ion-header>
 
 <ion-content>
-    <ion-card class="welcome-card">
-      <ion-card-header>
-        <ion-card-title>Popular Videos (IN)</ion-card-title>
-      </ion-card-header>
-     
-    </ion-card>
+  <ion-card class="welcome-card">
+    <ion-card-header>
+      <ion-card-title>Popular Videos (IN)</ion-card-title>
+    </ion-card-header>
 
-    <div *ngFor="let video of data">
-      <ion-card>
-        <img src="{{video.snippet.thumbnails.medium.url}}" (click)="play(video.id)">
-        <label>{{video.snippet.title}}</label> <br>
-        <p><b>{{video.snippet.channelTitle}}</b></p>
-        
-        
-      </ion-card>
+  </ion-card>
 
-    </div>
 
-    
-   
+  <ion-card *ngFor="let video of data">
+    <img src="{{video.snippet.thumbnails.medium.url}}" (click)="play(video.id)">
+    <ion-card-content>
+            {{video.snippet.title}} <br>
+      <small>{{video.snippet.channelTitle}}</small>
+    </ion-card-content>
+  </ion-card>
+
+
+
+
 </ion-content>

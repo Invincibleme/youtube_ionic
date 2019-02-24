@@ -1,22 +1,21 @@
 <ion-header>
-    <ion-toolbar>
-      <ion-buttons slot="start">
-        <ion-menu-button></ion-menu-button>
-      </ion-buttons>
-      <ion-title>
-        Category 
-      </ion-title>
-    </ion-toolbar>
-  </ion-header>
-  
-  
-  
-  <ion-content>
-    <div *ngFor="let list of catlist">
-      <ion-card>
-        <img src="{{list.snippet.thumbnails.medium.url}}" (click)="play(list.id.videoId)">
-        <label>{{list.snippet.title}}</label> <br>
-        <p><b>{{list.snippet.channelTitle}}</b></p>
-      </ion-card>
-    </div>
-  </ion-content>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Category
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card *ngFor="let list of catlist">
+    <img src="{{list.snippet.thumbnails.medium.url}}" (click)="play(list.id.videoId)">
+    <ion-card-content>
+      {{list.snippet.title}} <br>
+      <small>{{list.snippet.channelTitle}}</small>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
